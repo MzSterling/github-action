@@ -9,7 +9,8 @@ on:
         branches: [main, dev]
     # schedule:
     #     - cron:  "*/1 * * * *"
-
+env: 
+    region_name: us-east-1
 jobs:
 
     setup_job:
@@ -32,14 +33,13 @@ jobs:
     build_job:
         needs: 
             - setup_job
-
         runs-on: ubuntu-latest
         steps:
             - name: display hello
               run: echo hello
             - uses: actions/download-artifact@v4
               with: 
-                name: myfile
+                name: my-file
             - name: Display github action.txt
               run: cat github-action.txt
     deploy_job:
