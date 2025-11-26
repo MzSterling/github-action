@@ -16,7 +16,7 @@ jobs:
         runs-on: ubuntu-latest #we can have macos-latest, windows-latest. all default github action runners
         steps:
             - name: Checkout repo
-              uses: action/checkout@v4
+              uses: actions/checkout@v3
             - name: create file
               run: touch github-action.txt
             - name: print hello world
