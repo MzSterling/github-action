@@ -1,4 +1,4 @@
-name: Demo pipeline
+name: Demo2 pipeline
 
 on:
     push:
